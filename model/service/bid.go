@@ -12,6 +12,6 @@ func (s *BidService) GetAllBids() []entity.Bid {
 	return s.Repository.GetAll()
 }
 
-func (s *BidService) GetBidByJobId(jobID int) []entity.Bid {
-	return s.Repository.GetByJobId(jobID)
+func (s *BidService) GetBidByJobID(jobID int) []entity.Bid {
+	return s.Repository.GetByJobID(jobID)
 }

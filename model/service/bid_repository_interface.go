@@ -6,5 +6,5 @@ import (
 
 type BidRepositoryInterface interface {
 	GetAll() []entity.Bid
-	GetByJobId(jobID int) []entity.Bid
+	GetByJobID(jobID int) []entity.Bid
 }
