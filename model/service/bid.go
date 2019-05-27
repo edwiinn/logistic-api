@@ -8,7 +8,7 @@ type BidService struct {
 	Repository BidRepositoryInterface
 }
 
-func (s *BidService) GetAllBids() []entity.Bid {
+func (s *BidService) GetAllBid() []entity.Bid {
 	return s.Repository.GetAll()
 }
 

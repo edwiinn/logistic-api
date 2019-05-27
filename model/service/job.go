@@ -8,6 +8,6 @@ type JobService struct {
 	Repository JobRepositoryInterface
 }
 
-func (s *JobService) GetAll() []entity.Job {
+func (s *JobService) GetAllJob() []entity.Job {
 	return s.Repository.GetAll()
 }

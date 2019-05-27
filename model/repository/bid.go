@@ -7,8 +7,7 @@ import (
 	"github.com/jinzhu/gorm"
 )
 
-type BidRepository struct {
-}
+type BidRepository struct{}
 
 func (r *BidRepository) GetAll() []entity.Bid {
 	db, err := gorm.Open(config.DatabaseDriver, config.DatabaseSource)
@@ -17,7 +16,7 @@ func (r *BidRepository) GetAll() []entity.Bid {
 		panic(err)
 	}
 	bids := []entity.Bid{}
-	db.Find(bids)
+	db.Find(&bids)
 	return bids
 }
 
@@ -28,6 +27,6 @@ func (r *BidRepository) GetByJobID(jobID int) []entity.Bid {
 		panic(err)
 	}
 	bids := []entity.Bid{}
-	db.Where("job_id = ?", jobID).Find(bids)
+	db.Where("job_id = ?", jobID).Find(&bids)
 	return bids
 }

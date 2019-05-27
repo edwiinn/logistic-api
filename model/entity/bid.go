@@ -2,7 +2,7 @@ package entity
 
 type Bid struct {
 	ID                int
-	JobID             int
+	JobID             int `sql:"type:int REFERENCES job(id)"`
 	TransporterName   string
 	TransporterRating string
 	Price             float64

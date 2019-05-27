@@ -17,7 +17,8 @@ func setupDatabase() {
 	if err != nil {
 		panic(err)
 	}
-	db.AutoMigrate(&entity.Bid{}, &entity.Job{})
+	db.AutoMigrate(&entity.Job{})
+	db.AutoMigrate(&entity.Bid{}).AddForeignKey("job_id", "jobs(id)", "NO ACTION", "NO ACTION")
 }
 
 func main() {
