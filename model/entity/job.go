@@ -5,7 +5,7 @@ import (
 )
 
 type Job struct {
-	Id          int
+	ID          int
 	Origin      string
 	Destination string
 	Budget      float64

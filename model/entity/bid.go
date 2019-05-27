@@ -1,9 +1,10 @@
 package entity
 
 type Bid struct {
-	Id                int
-	JobId             int
+	ID                int
+	JobID             int
 	TransporterName   string
 	TransporterRating string
 	Price             float64
+	VehicleName       string
 }
