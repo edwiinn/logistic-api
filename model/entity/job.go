@@ -5,10 +5,10 @@ import (
 )
 
 type Job struct {
-	ID          int
-	Origin      string
-	Destination string
-	Budget      float64
-	Shipment    time.Time
-	Distance    float64
+	ID          int       `json:"id"`
+	Origin      string    `json:"origin"`
+	Destination string    `json:"destination"`
+	Budget      float64   `json:"budget"`
+	Shipment    time.Time `json:"shipment"`
+	Distance    float64   `json:"distance"`
 }

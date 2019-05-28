@@ -1,10 +1,10 @@
 package entity
 
 type Bid struct {
-	ID                int
-	JobID             int `sql:"type:int REFERENCES job(id)"`
-	TransporterName   string
-	TransporterRating string
-	Price             float64
-	VehicleName       string
+	ID                int     `json:"id"`
+	JobID             int     `json:"job_id"`
+	TransporterName   string  `json:"transporter_name"`
+	TransporterRating string  `json:"transporter_rating"`
+	Price             float64 `json:"price"`
+	VehicleName       string  `json:"vehicle_name"`
 }
