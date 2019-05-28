@@ -8,67 +8,77 @@ func Sort(arr SortPropertiesInterface) {
 	quickSort(arr, 0, arr.Length()-1)
 }
 
+func IsSorted(data SortPropertiesInterface) bool {
+	n := data.Length()
+	for i := n - 1; i > 0; i-- {
+		if data.Less(i, i-1) {
+			return false
+		}
+	}
+	return true
+}
+
 func JobByOrigin(arr []entity.Job, order OrderBy) {
 	if order == ASCENDING {
-		Sort(jobByOriginProperties(arr))
+		Sort(JobByOriginProperties(arr))
 	} else {
-		Sort(Reverse(jobByOriginProperties(arr)))
+		Sort(Reverse(JobByOriginProperties(arr)))
 	}
 }
 func JobByDestination(arr []entity.Job, order OrderBy) {
 	if order == ASCENDING {
-		Sort(jobByDestinationProperties(arr))
+		Sort(JobByDestinationProperties(arr))
 	} else {
-		Sort(Reverse(jobByDestinationProperties(arr)))
+		Sort(Reverse(JobByDestinationProperties(arr)))
 	}
 }
 func JobByBudget(arr []entity.Job, order OrderBy) {
 	if order == ASCENDING {
-		Sort(jobByBudgetProperties(arr))
+		Sort(JobByBudgetProperties(arr))
 	} else {
-		Sort(Reverse(jobByBudgetProperties(arr)))
+		Sort(Reverse(JobByBudgetProperties(arr)))
 	}
 }
 func JobByShipment(arr []entity.Job, order OrderBy) {
 	if order == ASCENDING {
-		Sort(jobByShipmentProperties(arr))
+		Sort(JobByShipmentProperties(arr))
 	} else {
-		Sort(Reverse(jobByShipmentProperties(arr)))
+		Sort(Reverse(JobByShipmentProperties(arr)))
 	}
 }
 func JobByDistance(arr []entity.Job, order OrderBy) {
 	if order == ASCENDING {
-		Sort(jobByDistanceProperties(arr))
+		Sort(JobByDistanceProperties(arr))
 	} else {
-		Sort(Reverse(jobByDistanceProperties(arr)))
+		Sort(Reverse(JobByDistanceProperties(arr)))
 	}
 }
 func BidByTransporterName(arr []entity.Bid, order OrderBy) {
 	if order == ASCENDING {
-		Sort(bidByTransporterNameProperties(arr))
+		Sort(BidByTransporterNameProperties(arr))
 	} else {
-		Sort(Reverse(bidByTransporterNameProperties(arr)))
+		Sort(Reverse(BidByTransporterNameProperties(arr)))
 	}
 }
 func BidByTransporterRating(arr []entity.Bid, order OrderBy) {
 	if order == ASCENDING {
-		Sort(bidByTransporterRatingProperties(arr))
+		Sort(BidByTransporterRatingProperties(arr))
 	} else {
-		Sort(Reverse(bidByTransporterRatingProperties(arr)))
+		Sort(Reverse(BidByTransporterRatingProperties(arr)))
 	}
 }
 func BidByPrice(arr []entity.Bid, order OrderBy) {
 	if order == ASCENDING {
-		Sort(bidByPriceProperties(arr))
+		Sort(BidByPriceProperties(arr))
 	} else {
-		Sort(Reverse(bidByPriceProperties(arr)))
+		Sort(Reverse(BidByPriceProperties(arr)))
 	}
 }
 func BidByVehicleName(arr []entity.Bid, order OrderBy) {
 	if order == ASCENDING {
-		Sort(bidByVehicleNameProperties(arr))
+		Sort(BidByVehicleNameProperties(arr))
 	} else {
-		Sort(Reverse(bidByVehicleNameProperties(arr)))
+		Sort(Reverse(BidByVehicleNameProperties(arr)))
 	}
 }
 

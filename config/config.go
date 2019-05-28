@@ -8,9 +8,13 @@ import (
 
 var DatabaseDriver string
 var DatabaseSource string
+var ServerURL string
 
 func init() {
 	godotenv.Load(".env")
+	serverAddr := os.Getenv("SERVER_ADDR")
+	serverPort := os.Getenv("SERVER_PORT")
+	ServerURL = serverAddr + ":" + serverPort
 	DatabaseDriver = os.Getenv("DATABASE_DRIVER")
 	databaseUserName := os.Getenv("DATABASE_USER")
 	databaseUserPass := os.Getenv("DATABASE_PASS")
