@@ -13,5 +13,7 @@
 + Download logistic-api and unzip
 + Place the folder inside src folder of GOROOT 
 + Change the folder name to "logistic-api"
++ Run MySQL server
++ Create database "logistic" in MySQL
 + run "go test -v" inside logistic-api to run uni testing
 + run "go run main.go" to run application
