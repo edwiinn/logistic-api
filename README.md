@@ -11,7 +11,7 @@
 ### Installation :
 + Download Go and Required Framework and Library
 + Download logistic-api and unzip
-+ Place the folder inside src folder of GOROOT 
++ Place the folder inside src folder of GOPATH 
 + Change the folder name to "logistic-api"
 + Run MySQL server
 + Create database "logistic" in MySQL
